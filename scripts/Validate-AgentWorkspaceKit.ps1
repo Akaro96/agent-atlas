@@ -142,7 +142,7 @@ $requiredPaths = @(
     "$RepoRoot\assets\install-flow.svg",
     "$RepoRoot\assets\compare.svg",
     "$RepoRoot\assets\installed-layout.svg",
-    "$RepoRoot\assets\social-preview.svg",
+    "$RepoRoot\assets\social-preview.png",
     "$RepoRoot\scripts\Install-AgentWorkspaceKit.ps1",
     "$RepoRoot\scripts\Invoke-KitScenarioSimulations.ps1",
     "$RepoRoot\scripts\Invoke-KitSmokeTests.ps1",
