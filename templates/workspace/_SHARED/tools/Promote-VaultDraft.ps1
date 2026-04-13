@@ -21,10 +21,15 @@ if (-not (Test-Path -LiteralPath $VaultRoot)) {
 }
 
 $resolvedDraftPath = (Resolve-Path -LiteralPath $DraftPath).Path
-$resolvedDraftRoot = [System.IO.Path]::GetFullPath((Join-Path $VaultRoot '10_Inbox\Agent Drafts'))
-$draftRootPrefix = $resolvedDraftRoot.TrimEnd('\') + '\'
+$resolvedDraftRoot = (Resolve-Path -LiteralPath (Join-Path $VaultRoot '10_Inbox\Agent Drafts')).Path
+$draftRelativePath = [System.IO.Path]::GetRelativePath($resolvedDraftRoot, $resolvedDraftPath)
 
-if (-not $resolvedDraftPath.StartsWith($draftRootPrefix, [System.StringComparison]::OrdinalIgnoreCase)) {
+if (
+    [System.IO.Path]::IsPathRooted($draftRelativePath) -or
+    $draftRelativePath.Equals('..', [System.StringComparison]::Ordinal) -or
+    $draftRelativePath.StartsWith("..\", [System.StringComparison]::Ordinal) -or
+    $draftRelativePath.StartsWith("../", [System.StringComparison]::Ordinal)
+) {
     throw "Draft path must live under: $resolvedDraftRoot"
 }
 
