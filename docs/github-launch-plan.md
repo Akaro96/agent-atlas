@@ -108,5 +108,5 @@ After the remote exists:
 
 - exact public repo name if you want something other than `agent-atlas`
 - whether Discussions should be enabled on day one
-- whether social preview should use `hero.svg` directly or a later PNG export
+- whether social preview should use `hero.jpg` directly or a separate export
 - branch protection details if you want stricter rules than the safe default

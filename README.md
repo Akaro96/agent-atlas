@@ -1,15 +1,23 @@
-# Agent Atlas
+<p align="center">
+  <img src="./assets/logo/agent-atlas-mark-256.png" alt="Agent Atlas project mark" width="144">
+</p>
 
-Portable dual-agent workspace harness for `Codex`, `Claude Code`, and an optional Obsidian knowledge layer.
+<h1 align="center">Agent Atlas</h1>
 
-![License](https://img.shields.io/badge/license-MIT-4B6BFB)
-![Windows First](https://img.shields.io/badge/platform-Windows%20first-1F7A8C)
-![Dual Agent](https://img.shields.io/badge/agents-Codex%20%2B%20Claude%20Code-0E9F6E)
-![Validated](https://img.shields.io/badge/validation-smoke--tested-7C3AED)
-![Knowledge Pipeline](https://img.shields.io/badge/knowledge-capture%20%E2%86%92%20curate%20%E2%86%92%20compile-CC7A00)
-[![Validate](https://github.com/Akaro96/agent-atlas/actions/workflows/validate.yml/badge.svg)](https://github.com/Akaro96/agent-atlas/actions/workflows/validate.yml)
+<p align="center">
+  Portable dual-agent workspace harness for <code>Codex</code>, <code>Claude Code</code>, and an optional Obsidian knowledge layer.
+</p>
 
-![Agent Atlas hero](./assets/hero.svg)
+<p align="center">
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-4B6BFB">
+  <img alt="Windows First" src="https://img.shields.io/badge/platform-Windows%20first-1F7A8C">
+  <img alt="Dual Agent" src="https://img.shields.io/badge/agents-Codex%20%2B%20Claude%20Code-0E9F6E">
+  <img alt="Validated" src="https://img.shields.io/badge/validation-smoke--tested-7C3AED">
+  <img alt="Knowledge Pipeline" src="https://img.shields.io/badge/knowledge-capture%20%E2%86%92%20curate%20%E2%86%92%20compile-CC7A00">
+  <a href="https://github.com/Akaro96/agent-atlas/actions/workflows/validate.yml"><img alt="Validate" src="https://github.com/Akaro96/agent-atlas/actions/workflows/validate.yml/badge.svg"></a>
+</p>
+
+![Agent Atlas hero](./assets/hero.jpg)
 
 This repository is a productized, open-source-friendly distillation of a real high-usage local setup. It is designed for people who want:
 
@@ -62,6 +70,12 @@ Repository slug:
 - **Use this if** you want a serious daily-driver harness that stays understandable.
 - **Skip this if** you want the biggest possible workflow operating system with hundreds of commands and maximum framework sprawl.
 - **Core bet**: clearer roots beat more magic.
+
+## Branding
+
+- `Agent Atlas` uses a project-specific mark inside this repository; it does not require changing a maintainer's GitHub account avatar.
+- Current logo assets live in [assets/logo/README.md](./assets/logo/README.md).
+- Use [assets/logo/agent-atlas-mark-square.png](./assets/logo/agent-atlas-mark-square.png) as the current master raster and [assets/logo/agent-atlas-mark-avatar-512.png](./assets/logo/agent-atlas-mark-avatar-512.png) for compact repo-facing placements.
 
 ## Quick Start
 

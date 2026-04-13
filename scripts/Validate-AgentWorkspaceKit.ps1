@@ -138,7 +138,7 @@ $requiredPaths = @(
     "$RepoRoot\docs\release-process.md",
     "$RepoRoot\docs\roadmap.md",
     "$RepoRoot\docs\why-agent-atlas.md",
-    "$RepoRoot\assets\hero.svg",
+    "$RepoRoot\assets\hero.jpg",
     "$RepoRoot\assets\install-flow.svg",
     "$RepoRoot\assets\compare.svg",
     "$RepoRoot\assets\installed-layout.svg",
