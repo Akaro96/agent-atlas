@@ -36,6 +36,9 @@ approval_policy = "on-request"
 sandbox_mode = "workspace-write"
 web_search = "live"
 
+# WARNING: fast_exec disables all approval prompts and sandbox restrictions.
+# Only use this profile in throwaway environments or when you fully understand
+# that Codex will execute every action without confirmation.
 [profiles.fast_exec]
 approval_policy = "never"
 sandbox_mode = "danger-full-access"
