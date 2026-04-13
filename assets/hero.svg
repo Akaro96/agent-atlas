@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" fill="none">
+  <rect width="1600" height="900" fill="#0B1020"/>
+  <rect x="60" y="60" width="1480" height="780" rx="28" fill="#11182D" stroke="#293455"/>
+  <rect x="110" y="150" width="420" height="580" rx="20" fill="#131F39" stroke="#355184"/>
+  <rect x="590" y="150" width="420" height="580" rx="20" fill="#131F39" stroke="#355184"/>
+  <rect x="1070" y="150" width="420" height="580" rx="20" fill="#131F39" stroke="#355184"/>
+  <text x="110" y="108" fill="#BFD6FF" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">Agent Atlas</text>
+  <text x="110" y="135" fill="#7E96C6" font-family="Segoe UI, Arial, sans-serif" font-size="14">Portable dual-agent workspace harness</text>
+
+  <text x="150" y="210" fill="#E8F0FF" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">Workspace</text>
+  <text x="150" y="250" fill="#8FA9D8" font-family="Segoe UI, Arial, sans-serif" font-size="18">Umbrella root, project roots, path rules</text>
+  <rect x="150" y="290" width="340" height="72" rx="14" fill="#1A2745"/>
+  <text x="175" y="333" fill="#DCE7FF" font-family="Consolas, monospace" font-size="20">AGENTS.md</text>
+  <rect x="150" y="380" width="340" height="72" rx="14" fill="#1A2745"/>
+  <text x="175" y="423" fill="#DCE7FF" font-family="Consolas, monospace" font-size="20">CLAUDE.md</text>
+  <rect x="150" y="470" width="340" height="72" rx="14" fill="#1A2745"/>
+  <text x="175" y="513" fill="#DCE7FF" font-family="Consolas, monospace" font-size="20">_SHARED/tools</text>
+  <rect x="150" y="560" width="340" height="72" rx="14" fill="#1A2745"/>
+  <text x="175" y="603" fill="#DCE7FF" font-family="Consolas, monospace" font-size="20">project bootstrap</text>
+
+  <text x="630" y="210" fill="#E8F0FF" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">Knowledge</text>
+  <text x="630" y="250" fill="#8FA9D8" font-family="Segoe UI, Arial, sans-serif" font-size="18">Separate durable vault, not repo clutter</text>
+  <rect x="630" y="290" width="340" height="72" rx="14" fill="#1A2745"/>
+  <text x="655" y="333" fill="#DCE7FF" font-family="Consolas, monospace" font-size="20">00 Home.md</text>
+  <rect x="630" y="380" width="340" height="72" rx="14" fill="#1A2745"/>
+  <text x="655" y="423" fill="#DCE7FF" font-family="Consolas, monospace" font-size="20">10_Inbox/Agent Drafts</text>
+  <rect x="630" y="470" width="340" height="72" rx="14" fill="#1A2745"/>
+  <text x="655" y="513" fill="#DCE7FF" font-family="Consolas, monospace" font-size="20">40_Decisions</text>
+  <rect x="630" y="560" width="340" height="72" rx="14" fill="#1A2745"/>
+  <text x="655" y="603" fill="#DCE7FF" font-family="Consolas, monospace" font-size="20">template notes</text>
+
+  <text x="1110" y="210" fill="#E8F0FF" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">Verification</text>
+  <text x="1110" y="250" fill="#8FA9D8" font-family="Segoe UI, Arial, sans-serif" font-size="18">Validation and end-to-end smoke tests</text>
+  <rect x="1110" y="290" width="340" height="72" rx="14" fill="#1A2745"/>
+  <text x="1135" y="333" fill="#DCE7FF" font-family="Consolas, monospace" font-size="20">Validate-AgentWorkspaceKit</text>
+  <rect x="1110" y="380" width="340" height="72" rx="14" fill="#1A2745"/>
+  <text x="1135" y="423" fill="#DCE7FF" font-family="Consolas, monospace" font-size="20">Invoke-KitSmokeTests</text>
+  <rect x="1110" y="470" width="340" height="72" rx="14" fill="#1A2745"/>
+  <text x="1135" y="513" fill="#DCE7FF" font-family="Consolas, monospace" font-size="20">leak checks</text>
+  <rect x="1110" y="560" width="340" height="72" rx="14" fill="#1A2745"/>
+  <text x="1135" y="603" fill="#DCE7FF" font-family="Consolas, monospace" font-size="20">portable templates</text>
+
+  <path d="M530 441H590" stroke="#4D78C7" stroke-width="4"/>
+  <path d="M1010 441H1070" stroke="#4D78C7" stroke-width="4"/>
+  <circle cx="560" cy="441" r="8" fill="#78A8FF"/>
+  <circle cx="1040" cy="441" r="8" fill="#78A8FF"/>
+</svg>

@@ -1,0 +1,28 @@
+# Generated workspace outputs
+active/
+reports/
+tmp/
+exports/
+dist/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Agent state and secrets
+.claude/history.jsonl
+.claude/.credentials.json
+.claude.json
+.codex/auth.json
+.env
+.env.*
+secrets/
+private/
+
+# Obsidian local state
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+
+# Package noise
+node_modules/

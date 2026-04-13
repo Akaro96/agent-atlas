@@ -1,0 +1,31 @@
+name: Validate
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: windows-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate kit
+        shell: pwsh
+        run: .\scripts\Validate-AgentWorkspaceKit.ps1
+      - name: Validate markdown links
+        shell: pwsh
+        run: .\scripts\Validate-MarkdownLinks.ps1
+      - name: Smoke tests
+        shell: pwsh
+        run: .\scripts\Invoke-KitSmokeTests.ps1
+      - name: Scenario simulations
+        shell: pwsh
+        run: .\scripts\Invoke-KitScenarioSimulations.ps1

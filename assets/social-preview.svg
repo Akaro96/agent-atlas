@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" fill="none">
+  <rect width="1280" height="640" fill="#0B1020"/>
+  <rect x="48" y="48" width="1184" height="544" rx="28" fill="#11182D" stroke="#2E3B62"/>
+  <text x="88" y="150" fill="#F0F6FF" font-family="Segoe UI, Arial, sans-serif" font-size="64" font-weight="700">Agent Atlas</text>
+  <text x="88" y="204" fill="#8FA8D4" font-family="Segoe UI, Arial, sans-serif" font-size="28">Portable dual-agent workspace harness for Codex, Claude Code, and an optional knowledge vault.</text>
+  <rect x="88" y="274" width="328" height="76" rx="18" fill="#16213D"/>
+  <rect x="442" y="274" width="328" height="76" rx="18" fill="#16213D"/>
+  <rect x="796" y="274" width="328" height="76" rx="18" fill="#16213D"/>
+  <text x="122" y="321" fill="#DCE7FF" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">Workspace roots</text>
+  <text x="476" y="321" fill="#DCE7FF" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">Knowledge pipeline</text>
+  <text x="830" y="321" fill="#DCE7FF" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">Validated installs</text>
+  <text x="88" y="432" fill="#A7C4F5" font-family="Segoe UI, Arial, sans-serif" font-size="26">Clearer roots. Less magic. Better daily-driver ergonomics.</text>
+  <text x="88" y="508" fill="#7BC1A0" font-family="Segoe UI, Arial, sans-serif" font-size="24">Windows-friendly • smoke-tested • portable • dual-agent aware</text>
+</svg>

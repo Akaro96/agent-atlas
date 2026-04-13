@@ -1,0 +1,45 @@
+#:schema https://developers.openai.com/codex/config-schema.json
+
+model = "gpt-5.4"
+personality = "pragmatic"
+model_reasoning_effort = "high"
+model_reasoning_summary = "concise"
+review_model = "gpt-5.4"
+web_search = "live"
+profile = "balanced"
+cli_auth_credentials_store = "auto"
+project_root_markers = [".git", "AGENTS.md", "AGENTS.override.md", "CLAUDE.md"]
+project_doc_fallback_filenames = ["CLAUDE.md", "CLAUDE.local.md"]
+project_doc_max_bytes = 65536
+tool_output_token_limit = 12000
+hide_agent_reasoning = true
+
+[agents]
+max_threads = 4
+max_depth = 1
+
+[history]
+persistence = "save-all"
+max_bytes = 52428800
+
+[tools.web_search]
+context_size = "low"
+
+[projects.'__WORKSPACE_ROOT__']
+trust_level = "trusted"
+
+[projects.'__VAULT_ROOT__']
+trust_level = "trusted"
+
+[profiles.balanced]
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
+web_search = "live"
+
+[profiles.fast_exec]
+approval_policy = "never"
+sandbox_mode = "danger-full-access"
+web_search = "live"
+
+[windows]
+sandbox = "elevated"

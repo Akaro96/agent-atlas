@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="700" viewBox="0 0 1600 700" fill="none">
+  <rect width="1600" height="700" fill="#0B1020"/>
+  <text x="70" y="80" fill="#EAF2FF" font-family="Segoe UI, Arial, sans-serif" font-size="42" font-weight="700">Install Flow</text>
+  <text x="70" y="118" fill="#90A7D1" font-family="Segoe UI, Arial, sans-serif" font-size="20">From clone to a usable mapped workspace in one guided path.</text>
+  <g>
+    <rect x="70" y="180" width="270" height="170" rx="22" fill="#131E36" stroke="#36517F"/>
+    <text x="100" y="230" fill="#DCE7FF" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">1. Install</text>
+    <text x="100" y="275" fill="#9CB4DD" font-family="Segoe UI, Arial, sans-serif" font-size="18">Generate workspace root,</text>
+    <text x="100" y="302" fill="#9CB4DD" font-family="Segoe UI, Arial, sans-serif" font-size="18">vault, Codex config,</text>
+    <text x="100" y="329" fill="#9CB4DD" font-family="Segoe UI, Arial, sans-serif" font-size="18">and Claude config.</text>
+  </g>
+  <g>
+    <rect x="385" y="180" width="270" height="170" rx="22" fill="#131E36" stroke="#36517F"/>
+    <text x="415" y="230" fill="#DCE7FF" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">2. Start Here</text>
+    <text x="415" y="275" fill="#9CB4DD" font-family="Segoe UI, Arial, sans-serif" font-size="18">Open the generated</text>
+    <text x="415" y="302" fill="#9CB4DD" font-family="Segoe UI, Arial, sans-serif" font-size="18">guide and verify the</text>
+    <text x="415" y="329" fill="#9CB4DD" font-family="Segoe UI, Arial, sans-serif" font-size="18">first-run paths.</text>
+  </g>
+  <g>
+    <rect x="700" y="180" width="270" height="170" rx="22" fill="#131E36" stroke="#36517F"/>
+    <text x="730" y="230" fill="#DCE7FF" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">3. Create Project</text>
+    <text x="730" y="275" fill="#9CB4DD" font-family="Segoe UI, Arial, sans-serif" font-size="18">Bootstrap software,</text>
+    <text x="730" y="302" fill="#9CB4DD" font-family="Segoe UI, Arial, sans-serif" font-size="18">AI pipeline, or</text>
+    <text x="730" y="329" fill="#9CB4DD" font-family="Segoe UI, Arial, sans-serif" font-size="18">research structure.</text>
+  </g>
+  <g>
+    <rect x="1015" y="180" width="270" height="170" rx="22" fill="#131E36" stroke="#36517F"/>
+    <text x="1045" y="230" fill="#DCE7FF" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">4. Capture Notes</text>
+    <text x="1045" y="275" fill="#9CB4DD" font-family="Segoe UI, Arial, sans-serif" font-size="18">Create draft notes in</text>
+    <text x="1045" y="302" fill="#9CB4DD" font-family="Segoe UI, Arial, sans-serif" font-size="18">the vault inbox before</text>
+    <text x="1045" y="329" fill="#9CB4DD" font-family="Segoe UI, Arial, sans-serif" font-size="18">promoting them.</text>
+  </g>
+  <g>
+    <rect x="1330" y="180" width="200" height="170" rx="22" fill="#131E36" stroke="#36517F"/>
+    <text x="1360" y="230" fill="#DCE7FF" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">5. Compile</text>
+    <text x="1360" y="275" fill="#9CB4DD" font-family="Segoe UI, Arial, sans-serif" font-size="18">Generate</text>
+    <text x="1360" y="302" fill="#9CB4DD" font-family="Segoe UI, Arial, sans-serif" font-size="18">index pages</text>
+    <text x="1360" y="329" fill="#9CB4DD" font-family="Segoe UI, Arial, sans-serif" font-size="18">and digests.</text>
+  </g>
+  <path d="M340 265H385" stroke="#78A8FF" stroke-width="6"/>
+  <path d="M655 265H700" stroke="#78A8FF" stroke-width="6"/>
+  <path d="M970 265H1015" stroke="#78A8FF" stroke-width="6"/>
+  <path d="M1285 265H1330" stroke="#78A8FF" stroke-width="6"/>
+  <rect x="70" y="430" width="1460" height="180" rx="24" fill="#10172A" stroke="#293455"/>
+  <text x="100" y="485" fill="#EAF2FF" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">What makes this different</text>
+  <text x="100" y="530" fill="#9CB4DD" font-family="Segoe UI, Arial, sans-serif" font-size="20">The install does not just drop templates. It creates a usable mapped workspace, a knowledge vault, helper tools, and a tested path from draft capture to compiled knowledge views.</text>
+</svg>

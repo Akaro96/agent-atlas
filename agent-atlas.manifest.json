@@ -1,0 +1,30 @@
+{
+  "name": "Agent Atlas",
+  "slug": "agent-atlas",
+  "version": "0.1.0",
+  "focus": [
+    "portable dual-agent workspace harness",
+    "separate durable knowledge layer",
+    "validation-first distribution",
+    "Windows-friendly daily-driver setup"
+  ],
+  "scripts": {
+    "install": "scripts/Install-AgentWorkspaceKit.ps1",
+    "newProject": "scripts/New-WorkspaceProject.ps1",
+    "validate": "scripts/Validate-AgentWorkspaceKit.ps1",
+    "smoke": "scripts/Invoke-KitSmokeTests.ps1",
+    "bundle": "scripts/New-ReleaseBundle.ps1"
+  },
+  "workspaceTools": [
+    "templates/workspace/_SHARED/tools/Invoke-WorkspaceDoctor.ps1",
+    "templates/workspace/_SHARED/tools/Search-Vault.ps1",
+    "templates/workspace/_SHARED/tools/New-VaultInboxNote.ps1",
+    "templates/workspace/_SHARED/tools/Promote-VaultDraft.ps1",
+    "templates/workspace/_SHARED/tools/Compile-VaultKnowledge.ps1"
+  ],
+  "optionalLayers": [
+    "Codex",
+    "Claude Code",
+    "Obsidian"
+  ]
+}

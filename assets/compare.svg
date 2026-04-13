@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="850" viewBox="0 0 1600 850" fill="none">
+  <rect width="1600" height="850" fill="#0B1020"/>
+  <text x="70" y="82" fill="#EAF2FF" font-family="Segoe UI, Arial, sans-serif" font-size="40" font-weight="700">Why Agent Atlas</text>
+  <text x="70" y="118" fill="#90A7D1" font-family="Segoe UI, Arial, sans-serif" font-size="20">A smaller framework can still be the stronger daily driver.</text>
+  <rect x="70" y="170" width="460" height="560" rx="24" fill="#121B32" stroke="#355184"/>
+  <rect x="570" y="170" width="460" height="560" rx="24" fill="#121B32" stroke="#355184"/>
+  <rect x="1070" y="170" width="460" height="560" rx="24" fill="#121B32" stroke="#355184"/>
+  <text x="105" y="220" fill="#EAF2FF" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">Agent Atlas</text>
+  <text x="605" y="220" fill="#EAF2FF" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">Huge Harnesses</text>
+  <text x="1105" y="220" fill="#EAF2FF" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">Ad-hoc Personal Setups</text>
+
+  <text x="105" y="280" fill="#9FD7B7" font-family="Segoe UI, Arial, sans-serif" font-size="22">+ portable install flow</text>
+  <text x="105" y="320" fill="#9FD7B7" font-family="Segoe UI, Arial, sans-serif" font-size="22">+ validation + smoke tests</text>
+  <text x="105" y="360" fill="#9FD7B7" font-family="Segoe UI, Arial, sans-serif" font-size="22">+ Codex + Claude Code</text>
+  <text x="105" y="400" fill="#9FD7B7" font-family="Segoe UI, Arial, sans-serif" font-size="22">+ knowledge pipeline</text>
+  <text x="105" y="440" fill="#9FD7B7" font-family="Segoe UI, Arial, sans-serif" font-size="22">+ better Windows fit</text>
+  <text x="105" y="500" fill="#F6D58D" font-family="Segoe UI, Arial, sans-serif" font-size="22">tradeoff: less total breadth</text>
+
+  <text x="605" y="280" fill="#9FD7B7" font-family="Segoe UI, Arial, sans-serif" font-size="22">+ huge command surface</text>
+  <text x="605" y="320" fill="#9FD7B7" font-family="Segoe UI, Arial, sans-serif" font-size="22">+ more agents and skills</text>
+  <text x="605" y="360" fill="#9FD7B7" font-family="Segoe UI, Arial, sans-serif" font-size="22">+ more showcase scale</text>
+  <text x="605" y="420" fill="#F3A6A6" font-family="Segoe UI, Arial, sans-serif" font-size="22">tradeoff: more maintenance</text>
+  <text x="605" y="460" fill="#F3A6A6" font-family="Segoe UI, Arial, sans-serif" font-size="22">tradeoff: more complexity</text>
+
+  <text x="1105" y="280" fill="#9FD7B7" font-family="Segoe UI, Arial, sans-serif" font-size="22">+ highly personal fit</text>
+  <text x="1105" y="340" fill="#F3A6A6" font-family="Segoe UI, Arial, sans-serif" font-size="22">tradeoff: poor portability</text>
+  <text x="1105" y="380" fill="#F3A6A6" font-family="Segoe UI, Arial, sans-serif" font-size="22">tradeoff: weak validation</text>
+  <text x="1105" y="420" fill="#F3A6A6" font-family="Segoe UI, Arial, sans-serif" font-size="22">tradeoff: private-state leakage</text>
+
+  <rect x="70" y="760" width="1460" height="56" rx="18" fill="#121B32" stroke="#355184"/>
+  <text x="100" y="796" fill="#EAF2FF" font-family="Segoe UI, Arial, sans-serif" font-size="22">Agent Atlas is not trying to be the biggest framework. It is trying to be the clearest one you can actually adopt and keep. </text>
+</svg>
