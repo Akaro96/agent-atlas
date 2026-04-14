@@ -136,6 +136,12 @@ $startHereLines = @(
     '',
     '```powershell',
     ('pwsh -File "{0}"' -f (Join-Path $workspaceTarget '_SHARED\tools\Invoke-WorkspaceDoctor.ps1')),
+    '```',
+    '',
+    '5. When a project becomes serious enough to deserve cross-session recall, sync a draft candidate into the vault:',
+    '',
+    '```powershell',
+    ('pwsh -File "{0}" -WorkspaceRoot "{1}" -VaultRoot "{2}" -AllProjects' -f (Join-Path $workspaceTarget '_SHARED\tools\Sync-WorkspaceProjectDrafts.ps1'), $workspaceTarget, $vaultTarget),
     '```'
 )
 

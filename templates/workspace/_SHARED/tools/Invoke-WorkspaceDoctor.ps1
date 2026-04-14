@@ -44,6 +44,7 @@ Test-RequiredPath -Path (Join-Path $WorkspaceRoot '_SHARED') -Category 'Workspac
 Test-RequiredPath -Path (Join-Path $WorkspaceRoot '_ARCHIVE') -Category 'Workspace'
 Test-RequiredPath -Path (Join-Path $WorkspaceRoot '_SHARED\tools\Search-Vault.ps1') -Category 'Tools'
 Test-RequiredPath -Path (Join-Path $WorkspaceRoot '_SHARED\tools\New-VaultInboxNote.ps1') -Category 'Tools'
+Test-RequiredPath -Path (Join-Path $WorkspaceRoot '_SHARED\tools\Sync-WorkspaceProjectDrafts.ps1') -Category 'Tools'
 Test-RequiredPath -Path (Join-Path $VaultRoot 'README.md') -Category 'Vault'
 Test-RequiredPath -Path (Join-Path $VaultRoot '00 Home.md') -Category 'Vault'
 Test-RequiredPath -Path (Join-Path $VaultRoot '10_Inbox\Agent Drafts') -Category 'Vault'
@@ -60,6 +61,22 @@ foreach ($project in $topLevelProjects) {
     $docsOverview = Join-Path $project.FullName 'docs\OVERVIEW.md'
     if (Test-Path -LiteralPath $docsOverview) {
         Add-Result 'Project' $docsOverview 'PASS' 'docs/OVERVIEW.md exists.'
+    }
+}
+
+$syncScript = Join-Path $WorkspaceRoot '_SHARED\tools\Sync-WorkspaceProjectDrafts.ps1'
+if ((Test-Path -LiteralPath $syncScript) -and (Test-Path -LiteralPath $VaultRoot)) {
+    try {
+        $syncJson = & $syncScript -WorkspaceRoot $WorkspaceRoot -VaultRoot $VaultRoot -AllProjects -PreviewOnly -AsJson -Quiet
+        if ($syncJson) {
+            $syncResult = $syncJson | ConvertFrom-Json
+            foreach ($candidate in @($syncResult.Results | Where-Object { $_.Action -eq 'would-create' })) {
+                Add-Result 'Knowledge' $candidate.ProjectTitle 'WARN' 'Serious project is missing vault coverage; review or create an inbox draft.'
+            }
+        }
+    }
+    catch {
+        Add-Result 'Knowledge' $syncScript 'WARN' 'Project draft sync preview failed.'
     }
 }
 

@@ -160,6 +160,7 @@ $requiredPaths = @(
     "$RepoRoot\templates\workspace\_SHARED\tools\Invoke-WorkspaceDoctor.ps1",
     "$RepoRoot\templates\workspace\_SHARED\tools\Search-Vault.ps1",
     "$RepoRoot\templates\workspace\_SHARED\tools\New-VaultInboxNote.ps1",
+    "$RepoRoot\templates\workspace\_SHARED\tools\Sync-WorkspaceProjectDrafts.ps1",
     "$RepoRoot\templates\workspace\_SHARED\tools\Promote-VaultDraft.ps1",
     "$RepoRoot\templates\workspace\_SHARED\tools\Compile-VaultKnowledge.ps1",
     "$RepoRoot\templates\workspace\_SHARED\templates\README.md",

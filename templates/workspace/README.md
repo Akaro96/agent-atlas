@@ -18,3 +18,9 @@ Do not treat it like a single implementation repo.
 Long-lived knowledge belongs in:
 
 - `__VAULT_ROOT__`
+
+Serious projects should also earn at least one inbox draft once they become worth remembering.
+
+- use `_SHARED/tools/Sync-WorkspaceProjectDrafts.ps1` to create draft candidates
+- keep curated folders curated
+- do not mirror every throwaway project into the vault

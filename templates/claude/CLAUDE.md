@@ -17,3 +17,4 @@
 
 Use `__VAULT_ROOT__` as the durable knowledge layer.
 Do not replace project-local docs with vault notes.
+When a project becomes serious enough to deserve cross-session recall, create or refresh an inbox draft before promoting anything into curated knowledge.

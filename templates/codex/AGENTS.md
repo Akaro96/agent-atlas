@@ -23,3 +23,4 @@ Produce strong results with low coordination overhead and clear verification.
 
 Use `__VAULT_ROOT__` as the durable knowledge layer for decisions, research, prompt patterns, and reusable notes.
 Treat it as read-mostly and default new AI-written notes to the vault inbox or draft area.
+If a project crosses the line from throwaway work to durable work, ensure there is at least one inbox draft before assuming the project will be discoverable later.

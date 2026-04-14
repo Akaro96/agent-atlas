@@ -37,6 +37,15 @@ pwsh -File .\scripts\Install-AgentWorkspaceKit.ps1 `
 pwsh -File D:\AgentWorkspace\AI-Workspace\_SHARED\tools\Invoke-WorkspaceDoctor.ps1
 ```
 
+9. When a project becomes serious enough to deserve cross-session recall, sync a candidate draft into the vault:
+
+```powershell
+pwsh -File D:\AgentWorkspace\AI-Workspace\_SHARED\tools\Sync-WorkspaceProjectDrafts.ps1 `
+  -WorkspaceRoot "D:\AgentWorkspace\AI-Workspace" `
+  -VaultRoot "D:\AgentWorkspace\Knowledge-Vault" `
+  -AllProjects
+```
+
 ## Important Note
 
 The installer creates portable starter configs inside the generated destination root.

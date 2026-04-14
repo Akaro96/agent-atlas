@@ -37,6 +37,7 @@ try {
     Assert-Path (Join-Path $workspaceRoot '_SHARED\tools\Invoke-WorkspaceDoctor.ps1')
     Assert-Path (Join-Path $workspaceRoot '_SHARED\tools\Search-Vault.ps1')
     Assert-Path (Join-Path $workspaceRoot '_SHARED\tools\New-VaultInboxNote.ps1')
+    Assert-Path (Join-Path $workspaceRoot '_SHARED\tools\Sync-WorkspaceProjectDrafts.ps1')
     Assert-Path (Join-Path $workspaceRoot '_SHARED\tools\Promote-VaultDraft.ps1')
     Assert-Path (Join-Path $workspaceRoot '_SHARED\tools\Compile-VaultKnowledge.ps1')
 
@@ -45,6 +46,7 @@ try {
 
     & (Join-Path $RepoRoot 'scripts\New-WorkspaceProject.ps1') -WorkspaceRoot $workspaceRoot -ProjectName 'Project-Beta' -ProjectType software
     & (Join-Path $RepoRoot 'scripts\New-WorkspaceProject.ps1') -WorkspaceRoot $workspaceRoot -ProjectName 'Project-Gamma' -ProjectType ai-pipeline
+    Set-Content -LiteralPath (Join-Path $workspaceRoot 'active\reports\project-beta-architecture.md') -Value '# Project Beta Architecture' -NoNewline
 
     Assert-Path (Join-Path $workspaceRoot 'Project-Beta\src\AGENTS.override.md')
     Assert-Path (Join-Path $workspaceRoot 'Project-Gamma\04_BUILD')
@@ -54,6 +56,21 @@ try {
     if ($doctorOutput -notmatch 'Overall status') {
         throw 'Workspace doctor did not produce a recognizable report.'
     }
+    if ($doctorOutput -notmatch 'Serious project is missing vault coverage') {
+        throw 'Workspace doctor did not flag missing vault coverage for a serious project.'
+    }
+
+    $syncPreview = & (Join-Path $workspaceRoot '_SHARED\tools\Sync-WorkspaceProjectDrafts.ps1') -WorkspaceRoot $workspaceRoot -VaultRoot $vaultRoot -ProjectRoot (Join-Path $workspaceRoot 'Project-Beta') -PreviewOnly -AsJson -Quiet | ConvertFrom-Json
+    if ($syncPreview.WouldCreateCount -lt 1) {
+        throw 'Project draft sync preview did not detect Project-Beta as a serious project.'
+    }
+
+    $syncResult = & (Join-Path $workspaceRoot '_SHARED\tools\Sync-WorkspaceProjectDrafts.ps1') -WorkspaceRoot $workspaceRoot -VaultRoot $vaultRoot -ProjectRoot (Join-Path $workspaceRoot 'Project-Beta') -AsJson -Quiet | ConvertFrom-Json
+    if ($syncResult.CreatedCount -lt 1) {
+        throw 'Project draft sync did not create an inbox draft.'
+    }
+    $autoDraftPath = @($syncResult.Results | Where-Object Action -eq 'created' | Select-Object -ExpandProperty DraftPath | Select-Object -First 1)[0]
+    Assert-Path $autoDraftPath
 
     $previewOutput = ((& (Join-Path $workspaceRoot '_SHARED\tools\New-VaultInboxNote.ps1') -VaultRoot $vaultRoot -Title 'Smoke Draft' -Project 'Project-Beta' -Preview) -join [Environment]::NewLine)
     if ($previewOutput -notmatch 'Agent Drafts') {

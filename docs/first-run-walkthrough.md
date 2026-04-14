@@ -67,3 +67,14 @@ pwsh -File "D:\AgentWorkspace\AI-Workspace\_SHARED\tools\Compile-VaultKnowledge.
 ```
 
 Now the generated index pages in `00_System/` reflect your curated knowledge model.
+
+## Step 7
+
+Once a project becomes serious enough to deserve durable recall, create a candidate draft before manually curating it:
+
+```powershell
+pwsh -File "D:\AgentWorkspace\AI-Workspace\_SHARED\tools\Sync-WorkspaceProjectDrafts.ps1" `
+  -WorkspaceRoot "D:\AgentWorkspace\AI-Workspace" `
+  -VaultRoot "D:\AgentWorkspace\Knowledge-Vault" `
+  -AllProjects
+```

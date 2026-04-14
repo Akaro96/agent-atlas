@@ -23,6 +23,12 @@ Raw notes start in:
 - `10_Inbox/Agent Drafts`
 - `10_Inbox/Human Notes`
 
+Serious projects that have started accumulating durable context but still have no vault coverage should also land here first.
+
+Use:
+
+- `Sync-WorkspaceProjectDrafts.ps1`
+
 ### Curate
 
 Only notes worth keeping move into:
@@ -58,3 +64,4 @@ Agents and humans can:
 - curated notes stay meaningful
 - generated indices improve discoverability
 - project truth still stays near the project itself
+- serious projects gain discoverability without mirroring every workspace folder

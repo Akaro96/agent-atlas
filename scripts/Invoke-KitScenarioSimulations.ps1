@@ -70,6 +70,7 @@ function Invoke-SpacesAndKnowledgeScenario {
     $startHere = Join-Path $destinationRoot 'START HERE.md'
     $doctor = Join-Path $workspaceRoot '_SHARED\tools\Invoke-WorkspaceDoctor.ps1'
     $capture = Join-Path $workspaceRoot '_SHARED\tools\New-VaultInboxNote.ps1'
+    $sync = Join-Path $workspaceRoot '_SHARED\tools\Sync-WorkspaceProjectDrafts.ps1'
     $search = Join-Path $workspaceRoot '_SHARED\tools\Search-Vault.ps1'
     $promote = Join-Path $workspaceRoot '_SHARED\tools\Promote-VaultDraft.ps1'
     $compile = Join-Path $workspaceRoot '_SHARED\tools\Compile-VaultKnowledge.ps1'
@@ -79,6 +80,7 @@ function Invoke-SpacesAndKnowledgeScenario {
     Assert-Path (Join-Path $destinationRoot '.claude\settings.json')
     Assert-Path $doctor
     Assert-Path $capture
+    Assert-Path $sync
     Assert-Path $search
     Assert-Path $promote
     Assert-Path $compile
@@ -93,6 +95,7 @@ function Invoke-SpacesAndKnowledgeScenario {
     & (Join-Path $RepoRoot 'scripts\New-WorkspaceProject.ps1') -WorkspaceRoot $workspaceRoot -ProjectName 'Project Software' -ProjectType software
     & (Join-Path $RepoRoot 'scripts\New-WorkspaceProject.ps1') -WorkspaceRoot $workspaceRoot -ProjectName 'Project Pipeline' -ProjectType ai-pipeline
     & (Join-Path $RepoRoot 'scripts\New-WorkspaceProject.ps1') -WorkspaceRoot $workspaceRoot -ProjectName 'Project Research' -ProjectType research
+    Set-Content -LiteralPath (Join-Path $workspaceRoot 'active\reports\project-software-architecture.md') -Value '# Project Software Architecture' -NoNewline
 
     Assert-Path (Join-Path $workspaceRoot 'Project Software\src\AGENTS.override.md')
     Assert-Path (Join-Path $workspaceRoot 'Project Pipeline\04_BUILD')
@@ -101,6 +104,13 @@ function Invoke-SpacesAndKnowledgeScenario {
 
     $doctorReport = ((& $doctor -WorkspaceRoot $workspaceRoot -VaultRoot $vaultRoot) -join [Environment]::NewLine)
     Assert-True ($doctorReport -match 'Overall status: \*\*PASS\*\*') 'Workspace doctor did not report PASS in the spaces scenario.'
+    Assert-True ($doctorReport -match 'Serious project is missing vault coverage') 'Workspace doctor did not warn about missing vault coverage in the spaces scenario.'
+
+    $syncPreview = & $sync -WorkspaceRoot $workspaceRoot -VaultRoot $vaultRoot -ProjectRoot (Join-Path $workspaceRoot 'Project Software') -PreviewOnly -AsJson -Quiet | ConvertFrom-Json
+    Assert-True ($syncPreview.WouldCreateCount -ge 1) 'Project sync preview missed Project Software.'
+
+    $syncResult = & $sync -WorkspaceRoot $workspaceRoot -VaultRoot $vaultRoot -ProjectRoot (Join-Path $workspaceRoot 'Project Software') -AsJson -Quiet | ConvertFrom-Json
+    Assert-True ($syncResult.CreatedCount -ge 1) 'Project sync did not create a draft in the spaces scenario.'
 
     $draftOne = (& $capture -VaultRoot $vaultRoot -Title 'Alpha Draft' -Project 'Project Software') | Select-Object -Last 1
     $draftTwo = (& $capture -VaultRoot $vaultRoot -Title 'Beta Draft' -Project 'Project Research') | Select-Object -Last 1

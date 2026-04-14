@@ -57,6 +57,13 @@ Repository slug:
 - `scripts/New-ReleaseBundle.ps1`: create a validated distributable release bundle
 - `examples/`: sample workspace and sample vault
 
+Installed workspace helpers include:
+
+- `Invoke-WorkspaceDoctor.ps1`: audit the generated workspace and point out missing knowledge coverage
+- `Sync-WorkspaceProjectDrafts.ps1`: create inbox draft candidates for serious projects that still have no vault coverage
+- `New-VaultInboxNote.ps1`: create structured draft notes
+- `Promote-VaultDraft.ps1`: move curated drafts into durable folders
+
 ## Design Goals
 
 - portable, not machine-bound
@@ -76,6 +83,13 @@ Repository slug:
 - `Agent Atlas` uses a project-specific mark inside this repository; it does not require changing a maintainer's GitHub account avatar.
 - Current logo assets live in [assets/logo/README.md](./assets/logo/README.md).
 - Use [assets/logo/agent-atlas-mark-square.png](./assets/logo/agent-atlas-mark-square.png) as the current master raster and [assets/logo/agent-atlas-mark-avatar-512.png](./assets/logo/agent-atlas-mark-avatar-512.png) for compact repo-facing placements.
+
+## Knowledge Capture Model
+
+- serious projects should not stay invisible forever
+- throwaway folders should not pollute the vault
+- the right default is `auto-draft candidate -> explicit curation -> curated note`
+- `Sync-WorkspaceProjectDrafts.ps1` exists to bridge that gap without turning the vault into a raw workspace mirror
 
 ## Quick Start
 
